@@ -8,7 +8,7 @@ $CONFIG_CLOUD = json_decode(file_get_contents(
 $DB_DSN_PARTS = array(
     "host" => $CONFIG_CLOUD['DOTCLOUD_DB_MYSQL_HOST'],
     "port" => $CONFIG_CLOUD['DOTCLOUD_DB_MYSQL_PORT'],
-    "dbname" => $CONFIG_CLOUD['DOTCLOUD_PROJECT'],
+    "dbname" => str_replace("php", "", $CONFIG_CLOUD['DOTCLOUD_PROJECT']),
 );
 $DB_DSN = "mysql:";
 foreach ($DB_DSN_PARTS as $key=>$value) {

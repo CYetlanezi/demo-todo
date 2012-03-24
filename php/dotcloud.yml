@@ -1,6 +1,4 @@
 www:
     type: php
-    approot: build
 db:
     type: mysql
-

@@ -65,9 +65,20 @@ have all the typical UNIX tools (such as make).
     From the root directory of the git repository, run the following commands:
 
         $ make db-reset
-        $ make launch
+        $ make launch-php
 
     This may take a brief period of time while dotcloud allocates the resources
     to host the application and deploys the code. Once that is all done, your
     default browser should launch, pointing directly at your new instance of
     the application.
+
+7.  Deploy the application using the Java back-end.
+
+    From the root directory of the git repository, run the following commands:
+
+        $ make clean
+        $ make launch-java
+
+    This will build the java-based back-end and deploy it in place of the PHP
+    back-end. When the browser launches, you should see that the homepage of
+    the app now says the back-end is Java.

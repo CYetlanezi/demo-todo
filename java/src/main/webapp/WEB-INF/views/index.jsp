@@ -40,7 +40,7 @@
 
     </div>
 
-  
+
     <div id="credits">
       Created by
       <br />
@@ -48,38 +48,38 @@
       <br />
       Cleanup, edits: <a href="http://addyosmani.com">Addy Osmani</a>.
       <br />
-      PHP back-end by <a href="https://github.com/turksheadsw">Sam Wilson</a>.
+      Java back-end by <a href="https://github.com/turksheadsw">Sam Wilson</a>.
     </div>
 
     <!-- Templates -->
 
     <script type="text/template" id="item-template">
-      <div class="todo {{ done != 0 ? 'done' : '' }}">
+    <div class="todo {{ done != 0 ? 'done' : '' }}">
         <div class="display">
-          <input class="check" type="checkbox" {{ done != 0 ? 'checked="checked"' : '' }} />
-          <label class="todo-content">{{ content }}</label>
-          <span class="todo-destroy"></span>
+            <input class="check" type="checkbox" {{ done != 0 ? 'checked="checked"' : '' }} />
+            <label class="todo-content">{{ content }}</label>
+            <span class="todo-destroy"></span>
         </div>
         <div class="edit">
-          <input class="todo-input" type="text" value="{{ content }}" />
+            <input class="todo-input" type="text" value="{{ content }}" />
         </div>
-      </div>
+    </div>
     </script>
 
     <script type="text/template" id="stats-template">
         {[ if (total) { ]}
-        <span class="todo-count">
-          <span class="number">{{ remaining }}</span>
-          <span class="word">{{ remaining == 1 ? 'item' : 'items' }}</span> left.
-        </span>
+            <span class="todo-count">
+            <span class="number">{{ remaining }}</span>
+            <span class="word">{{ remaining == 1 ? 'item' : 'items' }}</span> left.
+            </span>
         {[ } ]}
         {[ if (done) { ]}
-        <span class="todo-clear">
-          <a href="#">
+            <span class="todo-clear">
+            <a href="#">
             Clear <span class="number-done">{{ done }}</span>
             completed <span class="word-done">{{ done == 1 ? 'item' : 'items' }}</span>
-          </a>
-        </span>
+            </a>
+            </span>
         {[ } ]}
     </script>
 

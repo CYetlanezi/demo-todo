@@ -5,6 +5,13 @@
 
 // Load the application once the DOM is ready, using `jQuery.ready`:
 Backbone.emulateHTTP = true;
+// We need to change the scriptlet tags used by the Underscore template library
+// to make them compatible with JSP. So <% %> becomes {[ ]} and <%= %> becomes
+// {{ }} ("moustache notation")
+_.templateSettings = {
+  evaluate: /\{\[([\s\S]+?)\]\}/g,
+  interpolate : /\{\{(.+?)\}\}/g
+};
 
 $(function(){
 
@@ -252,7 +259,7 @@ $(function(){
 
     toggleAllComplete: function () {
       var done = this.allCheckbox.checked;
-      Todos.each(function (todo) { todo.save({'done': done}); });
+      Todos.each(function (todo) { todo.save({'done': done ? "1" : "0" }); });
     }
 
   });
