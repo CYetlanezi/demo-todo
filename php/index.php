@@ -44,7 +44,11 @@
     <div id="credits">
       Created by
       <br />
-      <a href="http://jgn.me/">J&eacute;r&ocirc;me Gravel-Niquet</a>. <br />Cleanup, edits: <a href="http://addyosmani.com">Addy Osmani</a>.
+      <a href="http://jgn.me/">J&eacute;r&ocirc;me Gravel-Niquet</a>.
+      <br />
+      Cleanup, edits: <a href="http://addyosmani.com">Addy Osmani</a>.
+      <br />
+      PHP back-end by <a href="https://github.com/turksheadsw">Sam Wilson</a>.
     </div>
 
     <!-- Templates -->
