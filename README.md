@@ -64,6 +64,7 @@ have all the typical UNIX tools (such as make).
 
     From the root directory of the git repository, run the following commands:
 
+        $ make push-php
         $ make db-reset
         $ make launch-php
 
@@ -76,7 +77,8 @@ have all the typical UNIX tools (such as make).
 
     From the root directory of the git repository, run the following commands:
 
-        $ make clean
+        $ make push-java
+        $ make db-reset
         $ make launch-java
 
     This will build the java-based back-end and deploy it in place of the PHP
