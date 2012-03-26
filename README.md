@@ -6,8 +6,6 @@ well as the benefits of building your applications using contemporary approaches
 such as that provided by backbone.js (see
 http://documentcloud.github.com/backbone/).
 
-You can view the application here: http://demo-turksheadsw.dotcloud.com/
-
 The front-end is taken from the backbone.js demo application "Todo List" by
 Jérôme Gravel-Niquet. I've made a few minor modifications, most important to
 remove the use of HTML5 LocalStorage and instead utilize a real database
