@@ -28,12 +28,11 @@
     Retrieve our configuration from the dotcloud environment.json file.
     -->
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="properties">
-            <props>
-                <prop key="url">jdbc:mysql://demojava-turksheadsw.dotcloud.com:25254/demo</prop>
-                <prop key="username">root</prop>
-                <prop key="password"></prop>
-            </props>
+        <property name="location" value="file:///home/dotcloud/environment.json"/>
+
+        <!-- Properties are persisted as JSON, so we use a custom class for that -->
+        <property name="propertiesPersister">
+            <bean class="turksheadsw.JsonPropertiesPersister"/>
         </property>
     </bean>
 
@@ -50,9 +49,10 @@
     <!-- Wiring for data access -->
     <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="${url}"/>
-        <property name="username" value="${username}"/>
-        <property name="password" value="${password}"/>
+        <!-- loaded from the /home/dotcloud/environment.json file -->
+        <property name="url" value="jdbc:mysql://${DOTCLOUD_DB_MYSQL_HOST}:${DOTCLOUD_DB_MYSQL_PORT}/demo"/>
+        <property name="username" value="${DOTCLOUD_DB_MYSQL_LOGIN}"/>
+        <property name="password" value="${DOTCLOUD_DB_MYSQL_PASSWORD}"/>
     </bean>
 
     <bean class="org.springframework.jdbc.core.JdbcTemplate">
