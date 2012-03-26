@@ -11,9 +11,9 @@ Jérôme Gravel-Niquet. I've made a few minor modifications, most important to
 remove the use of HTML5 LocalStorage and instead utilize a real database
 back-end.
 
-I built the application so that it could easily be deploying using the cloud
+I built the application so that it could easily be deployed using the cloud
 provider DotCloud, which provides a very simple mechanism for publishing
-applications without having to setup a full environment. Obviously, for a
+applications without having to set up a full environment. Obviously, for a
 real-world-system, you would need to implement something like this yourself.
 
 Using DotCloud for a simple application like this is Free, so you should be
