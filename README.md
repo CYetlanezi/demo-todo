@@ -56,7 +56,7 @@ have all the typical UNIX tools (such as make).
 
     If you already have git installed, it should go something like this:
 
-        $ git clone git@github.com/turksheadsw/demo-php.git
+        $ git clone git@github.com/turksheadsw/demo-todo.git
 
 6.  Deploy the application using the PHP back-end.
 
